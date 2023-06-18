@@ -45,29 +45,40 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
         )}
       </li>
       <>
+        {/* ==============Dashboard */}
         <li
           onClick={() => {
             navigate("/professions/recently-edited", { replace: true });
           }}
         >
-          <div className="icon-wrap"></div>
+          <div className="icon-wrap">
+            <RxDashboard onClick={openSidebar} size={18} />
+          </div>
+          Dashboard
         </li>
+        {/* =======Wallet====== */}
         <li
           onClick={() => {
-            navigate("/professions");
+            navigate("/professions/recently-edited", { replace: true });
           }}
         >
-          <ImProfile />
-          Profession
-          <AiFillCaretLeft
-            style={{
-              position: "absolute",
-              right: 0,
-              color: "#08093C",
-            }}
-            size={45}
-          />
+          <div className="icon-wrap">
+            <RxDashboard onClick={openSidebar} size={18} />
+          </div>
+          Wallet
         </li>
+        {/* =========Currencies====== */}
+        <li
+          onClick={() => {
+            navigate("/professions/recently-edited", { replace: true });
+          }}
+        >
+          <div className="icon-wrap">
+            <RxDashboard onClick={openSidebar} size={18} />
+          </div>
+          Currencies
+        </li>
+        {/* =============== */}
         <div className="log-out-wrapper">
           <button onClick={() => {}} type="button">
             Log Out

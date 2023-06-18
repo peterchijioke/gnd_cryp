@@ -84,12 +84,13 @@ $white:white;
   }
 }
 .icon-wrap{
-  width: 40px;
-    height: 40px;
-    
-  
-    background: #5250FA;
-    border-radius: 12px;
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #5250FA;
+  border-radius: 12px;
 }
 @media screen and (max-width:1000px) {
   .sidebar{

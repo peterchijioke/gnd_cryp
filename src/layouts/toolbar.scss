@@ -8,7 +8,6 @@ $white: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
- 
 }
 .title{
 color: #000000;
@@ -23,7 +22,7 @@ font-weight: 700;
 }
 @media screen and (max-width:1000px) {
   .tool-bar { 
-    
+
     }
     .profile-image {
           width: 50px;
@@ -31,5 +30,6 @@ font-weight: 700;
           border-radius: 50%;
           background-color: #ccc;
           align-self: flex-end;
+          border: 1px solid ;
         }
 }
