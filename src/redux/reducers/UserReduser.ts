@@ -1,4 +1,4 @@
-import {  createAction, createReducer, PayloadAction } from "@reduxjs/toolkit";
+import {  createReducer, PayloadAction } from "@reduxjs/toolkit";
 import { USER_DETAILS } from "../actions/ReducerActions";
 
 
