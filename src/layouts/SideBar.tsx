@@ -18,7 +18,7 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
       .matchMedia("(max-width: 1000px)")
       .addEventListener("change", (e) => setMatches(e.matches));
   }, [window.matchMedia("(max-width: 1000px)").matches]);
-  const [sidebarStatus, setSidebarStatus] = useState(matches);
+  const [active, setActive] = useState("");
 
   return (
     <div className={sidebar ? "sidebar sidebar-open" : "sidebar"}>
@@ -48,6 +48,7 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
         {/* ==============Dashboard */}
         <li
           onClick={() => {
+            setActive("dashboard");
             // navigate("/professions/recently-edited", { replace: true });
           }}
         >
@@ -59,6 +60,7 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
         {/* =======Wallet====== */}
         <li
           onClick={() => {
+            setActive("wallet");
             // navigate("/professions/recently-edited", { replace: true });
           }}
         >
@@ -70,6 +72,7 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
         {/* =========Currencies====== */}
         <li
           onClick={() => {
+            setActive("currency");
             // navigate("/professions/recently-edited", { replace: true });
           }}
         >
@@ -85,6 +88,7 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
         {/* =============== */}
         <li
           onClick={() => {
+            setActive("account");
             // navigate("/professions/recently-edited", { replace: true });
           }}
         >
