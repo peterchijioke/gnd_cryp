@@ -52,8 +52,18 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
             // navigate("/professions/recently-edited", { replace: true });
           }}
         >
-          <div className="icon-wrap">
-            <RxDashboard onClick={openSidebar} size={18} />
+          <div
+            className="icon-wrap"
+            style={{
+              color: active === "dashboard" ? "#5250FA" : "#ECEFF8",
+              backgroundColor: active === "dashboard" ? "#5250FA" : "#ECEFF8",
+            }}
+          >
+            <RxDashboard
+              style={{ color: active === "dashboard" ? "#fff" : "#565656" }}
+              onClick={openSidebar}
+              size={18}
+            />
           </div>
           Dashboard
         </li>
@@ -64,8 +74,17 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
             // navigate("/professions/recently-edited", { replace: true });
           }}
         >
-          <div className="icon-wrap">
-            <FaWallet size={18} />
+          <div
+            className="icon-wrap"
+            style={{
+              color: active === "wallet" ? "#5250FA" : "#ECEFF8",
+              backgroundColor: active === "wallet" ? "#5250FA" : "#ECEFF8",
+            }}
+          >
+            <FaWallet
+              style={{ color: active === "wallet" ? "#fff" : "#565656" }}
+              size={18}
+            />
           </div>
           Wallet
         </li>
@@ -76,9 +95,15 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
             // navigate("/professions/recently-edited", { replace: true });
           }}
         >
-          <div style={{ background: "#5250FA" }} className="icon-wrap">
+          <div
+            style={{
+              color: active === "currency" ? "#5250FA" : "#ECEFF8",
+              backgroundColor: active === "currency" ? "#5250FA" : "#ECEFF8",
+            }}
+            className="icon-wrap"
+          >
             <BsCurrencyExchange
-              style={{ color: "#fff" }}
+              style={{ color: active === "currency" ? "#fff" : "#565656" }}
               onClick={openSidebar}
               size={18}
             />
@@ -92,8 +117,18 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
             // navigate("/professions/recently-edited", { replace: true });
           }}
         >
-          <div className="icon-wrap">
-            <FaUser onClick={openSidebar} size={18} />
+          <div
+            style={{
+              color: active === "account" ? "#5250FA" : "#ECEFF8",
+              backgroundColor: active === "account" ? "#5250FA" : "#ECEFF8",
+            }}
+            className="icon-wrap"
+          >
+            <FaUser
+              style={{ color: active === "account" ? "#fff" : "#565656" }}
+              onClick={openSidebar}
+              size={18}
+            />
           </div>
           Account
         </li>
