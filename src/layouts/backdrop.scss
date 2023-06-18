@@ -1,0 +1,16 @@
+.backdrop{
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  position:fixed
+}
+
+
+.backdrop-open{
+   display: block;
+  }

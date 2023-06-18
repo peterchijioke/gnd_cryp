@@ -1,0 +1,35 @@
+$primary : blue;
+$white: white;
+
+.tool-bar{
+  background-color: #ECEDEF;;
+  color: $primary;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+.title{
+color: #000000;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+}
+.hambugger-wrapper{
+  display: flex;
+  flex-direction: row;
+  gap:1rem;
+}
+@media screen and (max-width:1000px) {
+  .tool-bar { 
+    
+    }
+    .profile-image {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: #ccc;
+          align-self: flex-end;
+        }
+}
