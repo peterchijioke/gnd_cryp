@@ -28,10 +28,6 @@ $white:white;
   cursor: pointer;
 }
 
-.sidebar li:hover {
-  background-color: white;
-  color: $primary;
-}
 
 .sidebar input {
   background-color: white;
@@ -89,9 +85,14 @@ $white:white;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #5250FA;
+  background-color: #ECEFF8;
+  
   border-radius: 12px;
+  // &:hover{
+  //   background: #5250FA;
+  // }
 }
+
 @media screen and (max-width:1000px) {
   .sidebar{
     position: fixed;

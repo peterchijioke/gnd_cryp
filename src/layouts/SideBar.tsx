@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import "./sidebar.scss";
 import { RxDashboard } from "react-icons/rx";
-import { ImProfile } from "react-icons/im";
-import { AiFillCaretLeft } from "react-icons/ai";
+import { FaUser, FaWallet } from "react-icons/fa";
 import { GrFormClose } from "react-icons/gr";
+import { BsCurrencyExchange } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/images/icons/logo-.svg";
 
@@ -48,7 +48,7 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
         {/* ==============Dashboard */}
         <li
           onClick={() => {
-            navigate("/professions/recently-edited", { replace: true });
+            // navigate("/professions/recently-edited", { replace: true });
           }}
         >
           <div className="icon-wrap">
@@ -59,24 +59,39 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
         {/* =======Wallet====== */}
         <li
           onClick={() => {
-            navigate("/professions/recently-edited", { replace: true });
+            // navigate("/professions/recently-edited", { replace: true });
           }}
         >
           <div className="icon-wrap">
-            <RxDashboard onClick={openSidebar} size={18} />
+            <FaWallet size={18} />
           </div>
           Wallet
         </li>
         {/* =========Currencies====== */}
         <li
           onClick={() => {
-            navigate("/professions/recently-edited", { replace: true });
+            // navigate("/professions/recently-edited", { replace: true });
+          }}
+        >
+          <div style={{ background: "#5250FA" }} className="icon-wrap">
+            <BsCurrencyExchange
+              style={{ color: "#fff" }}
+              onClick={openSidebar}
+              size={18}
+            />
+          </div>
+          Currencies
+        </li>
+        {/* =============== */}
+        <li
+          onClick={() => {
+            // navigate("/professions/recently-edited", { replace: true });
           }}
         >
           <div className="icon-wrap">
-            <RxDashboard onClick={openSidebar} size={18} />
+            <FaUser onClick={openSidebar} size={18} />
           </div>
-          Currencies
+          Account
         </li>
         {/* =============== */}
         <div className="log-out-wrapper">
