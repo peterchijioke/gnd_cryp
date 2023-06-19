@@ -20,7 +20,9 @@ export default function ToolBar({ openSidebar, ...props }: any) {
     <div className="tool-bar">
       <div className="inner-toolbar">
         <div className="hambugger-wrapper">
-          {matches && <RxDashboard onClick={openSidebar} size={25} />}
+          {matches && (
+            <RxDashboard color="#5350fa" onClick={openSidebar} size={25} />
+          )}
         </div>
         <div className="search">
           <AiOutlineSearch style={{ marginLeft: 10 }} size={15} />
