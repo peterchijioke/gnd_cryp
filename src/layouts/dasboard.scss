@@ -6,7 +6,13 @@ display: flex;
 .page-content{
   width: 100%;
   height: 100%;
-  background-color: green;
+  background-color: #ECEDEF;
+ 
+}
+.outlet-wrap{
+  width: 100%;
+  // padding added to every outlet
+  padding: 10px;
 }
 @media screen and (max-width:1000px) {
   

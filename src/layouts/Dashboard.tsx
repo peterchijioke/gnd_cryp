@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import SideBar from "./SideBar";
 import ToolBar from "./ToolBar";
 import "./dasboard.scss";
+import BackDrop from "./BackDrop";
 export default function Dashboard() {
   const [matches, setMatches] = useState(
     window.matchMedia("(max-width: 1000px)").matches
@@ -14,13 +15,18 @@ export default function Dashboard() {
   }, [window.matchMedia("(max-width: 1000px)").matches]);
   const [sidebarStatus, setSidebarStatus] = useState(matches);
   const openSidebar = () => setSidebarStatus(!sidebarStatus);
+  const ToggleSidebar = () => {
+    setSidebarStatus((previousState) => !previousState);
+  };
   return (
     <div className="page-wrapper">
       <SideBar openSidebar={openSidebar} sidebar={!sidebarStatus} />
-
       <div className="page-content">
+        <BackDrop sidebar={!sidebarStatus} closeSidebar={ToggleSidebar} />
         <ToolBar openSidebar={openSidebar} />
-        <Outlet />
+        <div className="outlet-wrap">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
