@@ -1,4 +1,4 @@
-$primary : blue;
+$primary : white;
 $white:white;
 .sidebar {
   background-color: $primary;
@@ -49,25 +49,39 @@ $white:white;
 .log-out-wrapper {
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: absolute;
   bottom: 0;
   margin-bottom: 1rem;
 
-  button {
-    width: 80%;
-    background-color: white;
-    height: 2rem;
-    border: 0px;
-    border-radius: 5px;
-  }
+ 
+  .inner-card{
+    width: 70%;
+    // height: 200px;
+    border-radius: 16px;
+  background-color: #E7E7F8;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  padding-bottom: 1rem;
 
-  button:hover {
-    background-color: $primary;
-    color: white;
-    border: 1px solid white;
+  button {
+      width: 80%;
+      background-color: #F6543E;
+      height: 2rem;
+      border: 0px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    button:hover {
+      background-color: #E7E7F8;
+      color: #F6543E;
+      border: 1px solid #F6543E;
+    }
   }
 }
 .app-logo{

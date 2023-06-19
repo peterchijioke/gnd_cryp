@@ -18,17 +18,11 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
       .matchMedia("(max-width: 1000px)")
       .addEventListener("change", (e) => setMatches(e.matches));
   }, [window.matchMedia("(max-width: 1000px)").matches]);
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState("dashboard");
 
   return (
     <div className={sidebar ? "sidebar sidebar-open" : "sidebar"}>
-      <li
-        style={{
-          backgroundColor: "white",
-          color: "#08093C",
-          borderBottom: "1px solid #08093C",
-        }}
-      >
+      <li>
         <div className="app-logo">
           <img src={Logo} alt="app logo" />
         </div>
@@ -65,7 +59,13 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
               size={18}
             />
           </div>
-          Dashboard
+          <label
+            style={{
+              color: active === "dashboard" ? "#5250FA" : "#565656",
+            }}
+          >
+            Dashboard
+          </label>
         </li>
         {/* =======Wallet====== */}
         <li
@@ -77,7 +77,6 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
           <div
             className="icon-wrap"
             style={{
-              color: active === "wallet" ? "#5250FA" : "#ECEFF8",
               backgroundColor: active === "wallet" ? "#5250FA" : "#ECEFF8",
             }}
           >
@@ -86,7 +85,13 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
               size={18}
             />
           </div>
-          Wallet
+          <label
+            style={{
+              color: active === "wallet" ? "#5250FA" : "#565656",
+            }}
+          >
+            Wallet
+          </label>
         </li>
         {/* =========Currencies====== */}
         <li
@@ -97,7 +102,6 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
         >
           <div
             style={{
-              color: active === "currency" ? "#5250FA" : "#ECEFF8",
               backgroundColor: active === "currency" ? "#5250FA" : "#ECEFF8",
             }}
             className="icon-wrap"
@@ -108,7 +112,11 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
               size={18}
             />
           </div>
-          Currencies
+          <label
+            style={{ color: active === "currency" ? "#5250FA" : "#565656" }}
+          >
+            Currencies
+          </label>
         </li>
         {/* =============== */}
         <li
@@ -119,7 +127,6 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
         >
           <div
             style={{
-              color: active === "account" ? "#5250FA" : "#ECEFF8",
               backgroundColor: active === "account" ? "#5250FA" : "#ECEFF8",
             }}
             className="icon-wrap"
@@ -130,13 +137,25 @@ export default function SideBar({ sidebar, openSidebar, ...props }: any) {
               size={18}
             />
           </div>
-          Account
+          <label
+            style={{
+              color: active === "account" ? "#5250FA" : "#565656",
+            }}
+          >
+            Account
+          </label>
         </li>
         {/* =============== */}
         <div className="log-out-wrapper">
-          <button onClick={() => {}} type="button">
-            Log Out
-          </button>
+          <div className="inner-card">
+            <img
+              src={require("../assets/images/icons/abst.svg").default}
+              alt="abs"
+            />
+            <button onClick={() => {}} type="button">
+              Log Out
+            </button>
+          </div>
         </div>
       </>
     </div>
